@@ -1,0 +1,95 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    overflow: hidden;
+    background-color: rgb(188, 246, 255);
+}
+
+.box {
+    width: 130px;
+    height: 130px;
+    font-size: 2.6em;
+    text-align: center;
+    background-color: rgb(134, 215, 255);
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    position: relative;
+}
+
+.linearAnimation {
+    animation: LinearAnim 1s linear;
+}
+
+.easeAnimation {
+    animation: EaseAnim 1s ease;
+}
+
+.easeInAnimation {
+    animation: EaseIn 1s ease-in;
+}
+
+.easeOutAnimation {
+    animation: EaseOut 1s ease-out;
+}
+
+.easeInOutAnimation {
+    animation: EaseInOut 1s ease-in-out;
+}
+
+@keyframes LinearAnim {
+    from {
+        margin-left: 5px;
+    }
+    to {
+        margin-left: calc(100vw - 120px);
+    }
+}
+
+@keyframes EaseAnim {
+    from {
+        margin-left: 5px;
+    }
+    to {
+        margin-left: calc(100vw - 130px);
+    }
+}
+
+@keyframes EaseIn {
+    from {
+        margin-left: 5px;
+    }
+    to {
+        margin-left: calc(100vw - 120px);
+    }
+}
+
+@keyframes EaseOut {
+    from {
+        margin-left: 5px;
+    }
+    to {
+        margin-left: calc(100vw - 130px);
+    }
+}
+
+@keyframes EaseInOut {
+    from {
+        margin-left: 5px;
+    }
+    to {
+        margin-left: calc(100vw - 130px);
+    }
+}
+.linearAnimation, .easeAnimation, .easeInAnimation, .easeOutAnimation, .easeInOutAnimation {
+    animation-fill-mode: forwards;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
